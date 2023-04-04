@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        div#area_input {
+            /* background-color: rgba(36, 39, 180, 0.13); */
+            padding: 20px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        output#res {
+            margin-bottom: -10px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+        }
+
+        .estilo {
+            -webkit-appearance: none;
+            display: flex;
+            background: #ffffff;
+            outline: none;
+            width: 100%;
+            height: 5px;
+            border-radius: 10px;
+        }
+
+        .estilo::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%; 
+            background: #f50273;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="area_input">
+        <output id="res">R$ 00,00</output> <br>
+        <input type="range" name="cont" class="estilo" id="cont" value="0" max="100" step="0" oninput="contar()">
+    </div>
+    <script>
+        function contar() {
+            var form = document.getElementById('area_input')
+            var cont = document.getElementById('cont')
+            var contador = Number(cont.value)
+            var res = document.getElementById('res')
+            res.innerHTML = contador.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+        }
+   </script>
+</body>
+</html>

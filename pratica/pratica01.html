@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticanndo estudos em js</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 2em;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            text-transform: uppercase;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #idd {
+            color: blue;
+        }
+
+        #idd2 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var idade = 16
+        if (idade >= 18) {
+            document.write(`<span id="idd">Maior de idade</span>`)
+        } else {
+            document.write(`<span id="idd2">Menor de idade</span>`)
+        }
+    </script>
+</body>
+</html>

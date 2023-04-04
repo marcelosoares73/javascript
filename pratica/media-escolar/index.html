@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Calcular Média Escolar</title>
+</head>
+<body>
+    
+    <section id="area_inputs">
+        <h1>Histórico de notas escolares</h1>
+
+        <div id="area">
+            <label for="nota1">1° Trimestre</label>
+            <input type="number" name="nota1" id="nota1" required>
+        </div>
+        <div id="area">
+            <label for="nota2">2° Trimestre</label>
+            <input type="number" name="nota2" id="nota2" required>
+        </div>
+
+        <div id="area">
+            <label for="nota3">3° Trimestre</label>
+            <input type="number" name="nota3" id="nota3" required>
+        </div>
+
+        <div id="area" class="space_bottom">
+            <label for="nota4">4° Trimestre</label>
+            <input type="number" name="nota4" id="nota4" required>
+        </div>
+            
+        <div id="botoes">
+            <input type="submit" value="Calcular" onclick="calcular()">
+        </div>
+
+        <div id="results">
+            <div>
+                <h3>Soma das notas: </h3>
+                <p id="soma_notas"></p>
+            </div>
+
+            <div>
+                <h3>Média: </h3>
+                <p id="media_notas"></p>
+            </div>
+
+            <div>
+                <h3>Situação: </h3>
+                <p id="situacao"></p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

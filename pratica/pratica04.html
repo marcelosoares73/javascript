@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #div_load {
+            animation: load alternate-reverse;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        @keyframes load {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+    </style>
+</head>
+</body>
+    <main>
+        <h1>Testando uso do JS!</h1>
+        <p>Testando novos temas para vscode</p>
+    </main>
+
+    <script>
+        var sal = 10000
+        document.writeln(`Você recebe ${sal.toLocaleString('pt-br', {style: 'currency', currency : 'BRL'})}<br>`)
+        if ( sal >= 1000 ) {
+            document.write('Tá bem!')
+        } else {
+            for ( let din = sal ; din <= 999 ; din++ ) {
+                document.writeln('Pobre')
+            }
+        }
+    </script>
+</body>
+</html>
